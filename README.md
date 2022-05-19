@@ -1,5 +1,5 @@
 <p align="center"><br><img src="https://avatars.githubusercontent.com/u/76786120?v=4" width="128" height="128" style="border-radius: 50px;" /></p>
-<h3 align="center">@ssibrahimbas/queue</h3>
+<h3 align="center">@ssibrahimbas/query</h3>
 <p align="center">
   A fast, synchronized and dynamic query builder package.
 </p>
