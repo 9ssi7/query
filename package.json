@@ -1,0 +1,46 @@
+{
+  "name": "@ssibrahimbas/query",
+  "version": "0.0.1",
+  "description": "A fast, synchronized and dynamic query builder package.",
+  "main": "./dist/lib/index.js",
+  "types": "./dist/lib/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "keywords": ["query", "query-builder", "sql", "chain","typescript"],
+  "homepage": "https://github.com/ssibrahimbas/query/blob/master/README.md",
+  "bugs": {
+    "url": "https://github.com/ssibrahimbas/query/issues",
+    "email": "info@ssibrahimbas.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssibrahimbas/query.git"
+  },
+  "scripts": {
+    "test": "jest --watchAll --no-cache",
+    "clear": "del-cli ./build/*",
+    "build": "npm run clear && tsc"
+  },
+  "author": "Sami Salih İBRAHİMBAŞ",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "jest": "^28.1.0",
+    "ts-jest": "^28.0.2",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.4"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "@/(.*)": "<rootDir>/$1",
+      "~/(.*)": "<rootDir>/$1"
+    }
+  }
+}

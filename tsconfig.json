@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": ["es7"],
+    "target": "es2017",
+    "declaration": true,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+}
