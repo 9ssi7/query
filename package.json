@@ -1,6 +1,6 @@
 {
   "name": "@ssibrahimbas/query",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A fast, synchronized and dynamic query builder package.",
   "main": "./dist/lib/index.js",
   "types": "./dist/lib/index.d.ts",
