@@ -3,6 +3,7 @@
  *
  * @export
  * @interface ISsiQuery
+ * @author Sami Salih İBRAHİMBAŞ
  */
 export interface ISsiQuery {
   /**
@@ -12,6 +13,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   table(table: string | Array<string>): ISsiQuery;
 
@@ -22,6 +24,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   select(fields: string | Array<string>): ISsiQuery;
 
@@ -33,6 +36,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   max(fields: string, name?: string | null): ISsiQuery;
 
@@ -44,6 +48,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   min(fields: string, name?: string | null): ISsiQuery;
 
@@ -55,6 +60,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   sum(fields: string, name?: string | null): ISsiQuery;
 
@@ -66,6 +72,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   count(fields: string, name?: string | null): ISsiQuery;
 
@@ -77,6 +84,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   avg(fields: string, name?: string | null): ISsiQuery;
 
@@ -90,6 +98,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   join(
     table: string,
@@ -108,6 +117,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   innerJoin(
     table: string,
@@ -126,6 +136,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   leftJoin(
     table: string,
@@ -144,6 +155,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   rightJoin(
     table: string,
@@ -162,6 +174,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   fullOuterJoin(
     table: string,
@@ -180,6 +193,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   leftOuterJoin(
     table: string,
@@ -198,6 +212,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   rightOuterJoin(
     table: string,
@@ -217,6 +232,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   where(
     where: string | Array<string>,
@@ -235,6 +251,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   orWhere(
     where: string | Array<string>,
@@ -251,6 +268,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   notWhere(
     where: string | Array<string>,
@@ -267,6 +285,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   orNotWhere(
     where: string | Array<string>,
@@ -282,6 +301,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   whereNull(where: string, not?: boolean): ISsiQuery;
 
@@ -292,6 +312,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   whereNotNull(where: string): ISsiQuery;
 
@@ -302,6 +323,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   grouped(callback: (q: ISsiQuery) => any): ISsiQuery;
 
@@ -315,6 +337,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   in(
     field: string,
@@ -331,6 +354,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   notIn(field: string, keys: Array<string | number>): ISsiQuery;
 
@@ -342,6 +366,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   orIn(field: string, keys: Array<string | number>): ISsiQuery;
 
@@ -353,6 +378,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   orNotIn(field: string, keys: Array<string | number>): ISsiQuery;
 
@@ -366,6 +392,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   findInSet(
     field: string,
@@ -382,6 +409,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   notFindInSet(field: string, key: string | number): ISsiQuery;
 
@@ -393,6 +421,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   orFindInSet(field: string, key: string | number): ISsiQuery;
 
@@ -404,6 +433,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   orNotFindInSet(field: string, key: string | number): ISsiQuery;
 
@@ -418,6 +448,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   between(
     field: string,
@@ -436,6 +467,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   notBetween(
     field: string,
@@ -452,6 +484,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   orBetween(
     field: string,
@@ -468,6 +501,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   orNotBetween(
     field: string,
@@ -485,6 +519,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   like(field: string, data: string, type?: string, andOr?: string): ISsiQuery;
 
@@ -496,6 +531,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   orLike(field: string, data: string): ISsiQuery;
 
@@ -507,6 +543,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   notLike(field: string, data: string): ISsiQuery;
 
@@ -518,6 +555,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   orNotLike(field: string, data: string): ISsiQuery;
 
@@ -529,6 +567,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   limit(limit: number, limitEnd?: number | null): ISsiQuery;
 
@@ -539,6 +578,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   offset(offset: number): ISsiQuery;
 
@@ -550,6 +590,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   pagination(perPage: number, page: number): ISsiQuery;
 
@@ -561,6 +602,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   orderBy(orderBy: string, orderDir?: string | null): ISsiQuery;
 
@@ -571,6 +613,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   groupBy(groupBy: string | Array<string>): ISsiQuery;
 
@@ -583,6 +626,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   having(
     field: string,
@@ -598,6 +642,7 @@ export interface ISsiQuery {
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   query(query: string, values?: Array<string | number> | null): ISsiQuery;
 
@@ -607,6 +652,7 @@ export interface ISsiQuery {
    * @return {*}  {string}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   get(): string;
 
@@ -616,6 +662,7 @@ export interface ISsiQuery {
    * @return {*}  {string}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   getAll(): string;
 
@@ -626,6 +673,7 @@ export interface ISsiQuery {
    * @return {*}  {string}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   insert(data: object): string;
 
@@ -636,6 +684,7 @@ export interface ISsiQuery {
    * @return {*}  {string}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   update(data: object): string;
 
@@ -645,6 +694,7 @@ export interface ISsiQuery {
    * @return {*}  {string}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   delete(): string;
 
@@ -654,6 +704,7 @@ export interface ISsiQuery {
    * @return {*}  {string}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   analyze(): string;
 
@@ -663,6 +714,7 @@ export interface ISsiQuery {
    * @return {*}  {string}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   check(): string;
 
@@ -672,6 +724,7 @@ export interface ISsiQuery {
    * @return {*}  {string}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   checksum(): string;
 
@@ -681,6 +734,7 @@ export interface ISsiQuery {
    * @return {*}  {string}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   optimize(): string;
 
@@ -690,6 +744,7 @@ export interface ISsiQuery {
    * @return {*}  {string}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   repair(): string;
 
@@ -698,6 +753,7 @@ export interface ISsiQuery {
    *
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   reset(): void;
 
@@ -707,6 +763,7 @@ export interface ISsiQuery {
    * @return {*}  {string | null}
    * @memberof ISsiQuery
    * @since 0.0.1
+   * @author Sami Salih İBRAHİMBAŞ
    */
   getQuery(): string | null;
 }
