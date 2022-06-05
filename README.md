@@ -83,6 +83,8 @@ npm run test
 |--------------------------|
 |**[`table(...)`](#table)**|
 |**[`select(...)`](#select)**|
+|**[`groupConcat(...)`](#groupconcat)**|
+|**[`least(...)`](#least)**|
 |**[`max(...)`](#max)**|
 |**[`min(...)`](#min)**|
 |**[`sum(...)`](#sum)**|
@@ -221,6 +223,91 @@ import { Query } from "@ssibrahimbas/query"
 const query : string = Query.table("users").select(["id As userId", "name As userName"]).analyze();
 
 // SELECT id As userId, name As userName FROM users
+```
+
+Using Records:
+
+```typescript
+import { Query } from "@ssibrahimbas/query"
+
+const data = { Id: "userId", FirstName: "firstName" };
+const query : string = Query.table("users").select(data).getAll();
+
+// SELECT Id AS userId, FirstName AS firstName FROM users
+```
+
+Using Records With Arrays:
+
+```typescript
+import { Query } from "@ssibrahimbas/query"
+
+const data: Array<Record<string, string>> = [
+  { Id: "userId" },
+  { FirstName: "firstName" },
+];
+const query : string = Query.table("users").select(data).getAll();
+
+// SELECT Id AS userId, FirstName AS firstName FROM users
+```
+
+<br>
+
+### least
+
+Abstract:
+
+```typescript
+least(fields: Array<string>, name?: string | null) : ISsiQuery;
+```
+
+Example:
+
+```typescript
+import { Query } from "@ssibrahimbas/query"
+
+const query : string = Query.table("users").least(["point1", "point2", "point3"], "minPoint").getAll();
+
+// "SELECT LEAST(point1, point2, point3) AS minPoint FROM users"
+```
+
+Single Parameter:
+
+```typescript
+import { Query } from "@ssibrahimbas/query"
+
+const query : string = Query.table("users").least(["point1", "point2", "point3"]).getAll();
+
+// "SELECT LEAST(point1, point2, point3) FROM users"
+```
+
+<br>
+
+### groupConcat
+
+Abstract:
+
+```typescript
+groupConcat(fields: string, name?: string | null) : ISsiQuery;
+```
+
+Example:
+
+```typescript
+import { Query } from "@ssibrahimbas/query"
+
+const query : string = Query.table("users").groupConcat("UserId", "users").getAll();
+
+// "SELECT GROUP_CONCAT(UserId) AS users FROM users"
+```
+
+Single Parameter:
+
+```typescript
+import { Query } from "@ssibrahimbas/query"
+
+const query : string = Query.table("users").groupConcat("UserId").getAll();
+
+// "SELECT GROUP_CONCAT(UserId) FROM users"
 ```
 
 <br>

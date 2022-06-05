@@ -10,6 +10,50 @@ test("Query: select function testing", () => {
   expect(query).toEqual("SELECT id, firstName FROM users LIMIT 1");
 });
 
+test("Query: select with AS statement testing", () => {
+  const data = { Id: "userId", FirstName: "firstName" };
+  const query = Query.table("users").select(data).getAll();
+  expect(query).toEqual(
+    "SELECT Id AS userId, FirstName AS firstName FROM users"
+  );
+});
+
+test("Query: select with AS statement on array testing", () => {
+  const data: Array<Record<string, string>> = [
+    { Id: "userId" },
+    { FirstName: "firstName" },
+  ];
+  const query = Query.table("users").select(data).getAll();
+  expect(query).toEqual(
+    "SELECT Id AS userId, FirstName AS firstName FROM users"
+  );
+});
+
+test("Query: select with As statement on multiple values array testing", () => {
+  const data: Array<Record<string, string>> = [
+    { Id: "userId", FirstName: "firstName" },
+    { Email: "userEmail" },
+  ];
+  const query = Query.table("users").select(data).getAll();
+  expect(query).toEqual(
+    "SELECT Id AS userId, FirstName AS firstName, Email AS userEmail FROM users"
+  );
+});
+
+test("Query: groupConcat function testing", () => {
+  const query = Query.table("users").groupConcat("UserId", "users").getAll();
+  expect(query).toEqual("SELECT GROUP_CONCAT(UserId) AS users FROM users");
+});
+
+test("Query: least function testing", () => {
+  const query = Query.table("users")
+    .least(["point1", "point2", "point3", "point4"], "minPoint")
+    .getAll();
+  expect(query).toEqual(
+    "SELECT LEAST(point1,point2,point3,point4) AS minPoint FROM users"
+  );
+});
+
 test("Query: max function testing", () => {
   const query = Query.table("users").max("id", "count").get();
   expect(query).toEqual("SELECT MAX(id) AS count FROM users LIMIT 1");

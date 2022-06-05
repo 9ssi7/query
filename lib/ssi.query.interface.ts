@@ -20,13 +20,42 @@ export interface ISsiQuery {
   /**
    *
    *
-   * @param {(string | Array<string>)} fields
+   * @param {(string | Record<string, string> | Array<string> | Array<Record<string, string>>)} fields
    * @return {*}  {ISsiQuery}
    * @memberof ISsiQuery
    * @since 0.0.1
    * @author Sami Salih İBRAHİMBAŞ
    */
-  select(fields: string | Array<string>): ISsiQuery;
+  select(
+    fields:
+      | string
+      | Record<string, string>
+      | Array<string>
+      | Array<Record<string, string>>
+  ): ISsiQuery;
+
+  /**
+   *
+   *
+   * @param {string} fields
+   * @param {(string | null)} [name]
+   * @return {*}  {ISsiQuery}
+   * @memberof ISsiQuery
+   * @since 0.0.3
+   * @author Sami Salih İBRAHİMBAŞ
+   */
+  groupConcat(fields: string, name?: string | null): ISsiQuery;
+
+  /**
+   *
+   *
+   * @param {string[], string} fields
+   * @return {*}  {ISsiQuery}
+   * @memberof ISsiQuery
+   * @since 0.0.3
+   * @author Sami Salih İBRAHİMBAŞ
+   */
+  least(fields: string[], name: string): ISsiQuery;
 
   /**
    *

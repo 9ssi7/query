@@ -39,8 +39,51 @@ export class SsiQuery implements ISsiQuery {
     return this;
   }
 
-  select(fields: string | Array<string>): this {
-    this.optimizeSelect(fields instanceof Array ? fields.join(", ") : fields);
+  select(
+    fields:
+      | string
+      | Record<string, string>
+      | Array<string>
+      | Array<Record<string, string>>
+  ): this {
+    let _fields = "";
+    if (fields instanceof Array && fields.length > 0) {
+      if (typeof fields[0] !== "string") {
+        fields.forEach((field) => {
+          if (_fields.length > 1) {
+            _fields += ", ";
+          }
+          _fields += this.parseSelectWithAsObject(field as object);
+        });
+      } else {
+        _fields = fields.join(", ");
+      }
+    } else if (typeof fields !== "string") {
+      _fields = this.parseSelectWithAsObject(fields);
+    } else {
+      _fields = fields;
+    }
+    this.optimizeSelect(_fields);
+    return this;
+  }
+
+  private parseSelectWithAsObject = (obj: object): string => {
+    return Object.entries(obj)
+      .map(([key, value]) => `${key} AS ${value}`)
+      .join(", ");
+  };
+
+  groupConcat(fields: string, name: string | null): this {
+    this.optimizeSelect(
+      this.optimizeSqlFunctionWithPlaceholder("GROUP_CONCAT", fields, name)
+    );
+    return this;
+  }
+
+  least(fields: Array<string>, name: string | null): this {
+    this.optimizeSelect(
+      this.optimizeSqlFunctionWithPlaceholder("LEAST", fields.join(","), name)
+    );
     return this;
   }
 
