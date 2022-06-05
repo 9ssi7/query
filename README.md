@@ -202,7 +202,7 @@ Select the fields to use for the query
 Abstract:
 
 ```typescript
-select(fields: string | Array<string>) : ISsiQuery;
+select(fields: Record<string,string> | Array<Record<string, string>> | string | Array<string>) : ISsiQuery;
 ```
 
 Example:
